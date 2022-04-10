@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<tutorial>
+    <title>My Cool Tutorial</title>
+    <description>Hello there...</description>
+    <theme>
+        <highlight>indigo-400</highlight>
+        <background>white</background>
+        <border>slate-900</border>
+        <text>gray-700</text>
+    </theme>
+    <section>
+        <title>Section 1</title>
+        <node type="text">
+            Hello there. This is a text box that drops a shadow.
+        </node>
+        <node>
+            This is another block of text that can fit into the same line.
+        </node>
+        <node>
+            This will go into a <i>new</i> line.
+        </node>
+    </section>
+    <section>
+        <title>Section 2</title>
+        <node type="code" language="bsk" name="Code block">
+on load:
+    trigger:
+        print "hello"
+        </node>
+        <node>
+            Code sections can be mixed with text sections.
+        </node>
+        <node type="code" name="Code block">
+function blob() {
+    console.log("hello");
+}
+        </node>
+    </section>
+    <section>
+        <node>This section has no heading.</node>
+    </section>
+    <section>
+        <title>Another</title>
+        <node>A third section.</node>
+        <node type="image" size="w-6/12">Cookie.</node>
+        <node type="choice">
+            <question>What is the best bird?</question>
+            <choice>Duck</choice>
+            <choice>Also duck</choice>
+            <choice>Goose</choice>
+            <choice correct="true">Penguin</choice>
+        </node>
+        <node type="choice">
+            <question>How many beans make five?</question>
+            <choice>Three</choice>
+            <choice correct="true">Five</choice>
+        </node>
+    </section>
+    <section>
+        <title>Four</title>
+        <node>
+            Here is some example <b>code</b>.
+            Have a go at filling in the blanks. Make sure to press the button to check your results.
+        </node>
+        <node type="complete">
+on script `load`:
+    trigger:
+        `print` "hello"
+        </node>
+    </section>
+</tutorial>
