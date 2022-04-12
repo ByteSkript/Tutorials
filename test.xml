@@ -2,6 +2,7 @@
 <tutorial>
     <title>My Cool Tutorial</title>
     <description>Hello there...</description>
+    <author>Moderocky</author>
     <theme>
         <highlight>indigo-400</highlight>
         <background>white</background>
