@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<tutorial>
+    <title>Getting Started</title>
+    <description>A beginner's introduction to using ByteSkript's basic features and running scripts.</description>
+    <author>Moderocky</author>
+    <theme>
+        <highlight>indigo-400</highlight>
+        <background>white</background>
+        <border>slate-900</border>
+        <text>gray-700</text>
+    </theme>
+    <section>
+        <node type="text">
+            ByteSkript allows scripts to be run in a standalone environment from the command-line.
+            Some versions may be attached to other applications (e.g. a Minecraft server) but for simplicity, this guide assumes you are using the basic version.
+        </node>
+    </section>
+    <section>
+        <title>Installing ByteSkript</title>
+        <node type="text">
+            The latest ByteSkript version can be downloaded from the <a href="https://github.com/Moderocky/ByteSkript/releases">GitHub Releases</a> page.
+        </node>
+        <node>
+            There is one main executable Jar here, with commands.
+            <li>
+                <ul>
+                    <b>run:</b> loads and runs user-created scripts.
+                    This is the best option for creating and running scripts locally.
+                </ul>
+                <ul>
+                    <b>jar:</b> compiles scripts into an executable jar file.
+                    This is useful for building shareable versions of the program with no dependencies.
+                </ul>
+                <ul>
+                    <b>compile:</b> compiles scripts into raw classes.
+                    This is designed for language developers - these files are not directly executable.
+                </ul>
+            </li>
+        </node>
+        <node>
+            This guide is written for using the <b>run</b> command.
+        </node>
+        <node>
+            Make sure you have <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">Java</a> installed.
+            ByteSkript always runs on the latest Java version (currently 17.)
+        </node>
+    </section>
+    <section>
+        <title>Setting up Your Environment</title>
+        <node>
+            The first time you run ByteSkript it will create all the necessary folders and files for you.
+            <li>
+                <ol>
+                    Place the downloaded <code>ByteSkript.jar</code> into an empty folder.
+                </ol>
+                <ol>
+                    Run the Jar file with <code>java -jar path/to/ByteSkript.jar</code>.
+                    Macintosh/Linux users can do this through terminal or <a href="https://coderedirect.com/questions/534005/script-to-run-jar-file-on-mac-os-x">by creating a clickable shell file</a>.
+                    Windows users can do this through command prompt or by <a href="https://stackoverflow.com/questions/394616/running-jar-file-on-windows">creating a clickable bat file</a>.
+                </ol>
+            </li>
+            This should create <b>four</b> folders next to the ByteSkript jar.
+            The <code>skript/</code> folder is the most important.
+        </node>
+    </section>
+</tutorial>
