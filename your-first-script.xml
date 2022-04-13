@@ -1,0 +1,117 @@
+<?xml version="1.0" ?>
+<tutorial>
+    <title>Writing Your First Script</title>
+    <description>A short guide to writing and running your first script.</description>
+    <author>Moderocky</author>
+    <theme>
+        <highlight>fuchsia-500</highlight>
+        <background>white</background>
+        <border>slate-900</border>
+        <text>gray-700</text>
+    </theme>
+    <section>
+        <node>
+            Any file with a name ending in <code>.bsk</code> in the <code>skript/</code> folder will be seen and loaded by ByteSkript.
+        </node>
+        <node type="info">
+            While a basic app like Notepad++ or TextEdit is sufficient, a code-editing app like GitHub's <a href="https://atom.io/">Atom</a>,
+            Microsoft's <a href="https://code.visualstudio.com/">VSCode</a> or JetBrains's <a href="https://www.jetbrains.com/idea/">IntelliJ</a> may be more useful.
+        </node>
+        <node>
+            Start by creating a new script file called <code>myscript.bsk</code> in the <code>skript/</code> folder.
+            <p></p>
+            You can open this file in your editor app.
+        </node>
+        <node>
+            For testing, we can start by writing a simple trigger for the on [script] load event.
+            <p></p>
+            This on load event will be run when your script is loaded, but never again.
+        </node>
+    </section>
+    <section>
+        <node type="code" language="ByteSkript">
+on load:
+    trigger: // the code to be run goes inside triggers
+        print "hello" // prints hello to the command-line
+        </node>
+    </section>
+    <section>
+        <node>
+            Our <code>trigger:</code> section needs to be indented inside the <code>on load:</code> event.
+            <p></p>
+            This is to tell ByteSkript that the trigger belongs to this event.
+        </node>
+        <node type="info" mode="check">
+            You can indent using tabs <b>or</b> spaces (2, 4, 8, etc.) but <b>not</b> a mixture of both!
+        </node>
+    </section>
+    <section>
+        <title>Testing the Script</title>
+        <node>
+            The <code>print "hello"</code> effect will print a line to the system output (command-line.)
+            <p></p>
+            You can read more about this and other effects in the <a href="https://docs.byteskript.org">documentation</a>.
+        </node>
+        <node>
+            Once you've saved your <code>myscript.bsk</code> file, you can run it using the run command.
+            <p></p>
+            <code>java -jar ByteSkript.jar run</code>
+            <p></p>
+            You should see a "hello" output in your console.
+        </node>
+    </section>
+    <section>
+        <title>Exiting</title>
+        <node>
+            <p>By default, the program will run until you kill it by closing the console window.</p>
+            <p>On a UNIX terminal, <code>CTRL + C</code> will end the program.</p>
+        </node>
+        <node>
+            <p>If we want it to end automatically, we can add an <code>exit program</code> effect to our trigger.</p>
+            <p>This effect will stop the entire program when it is reached.</p>
+        </node>
+        <node type="code" language="ByteSkript">
+on load:
+    trigger:
+        print "hello"
+        exit program
+        </node>
+    </section>
+    <section>
+        <title>More Effects</title>
+        <node>
+            <p>We can make the program more complex by introducing the <code>wait</code> effect.</p>
+            <p>This will pause the current process for a certain amount of time. Background tasks are unaffected.</p>
+        </node>
+        <node>
+            In this version, the program will wait for three seconds before printing the second output.
+            Nothing will happen during this time.
+        </node>
+        <node type="code" language="ByteSkript">
+on load:
+    trigger:
+        print "hello"
+        wait 3 seconds // waits for three seconds
+        print "I waited for you"
+        exit program
+        </node>
+    </section>
+    <section>
+        <title>Using Variables</title>
+        <node>
+            <p>Currently our program is very simple. To add more complex behaviour, we will need to introduce variables.</p>
+            <p>Variables are in-program containers to store data. There are currently four types, but for now we will use the most basic one.</p>
+        </node>
+        <node>
+            Variables are written inside curly <code>{var_name}</code> brackets.
+            The name can contain alphanumeric characters and underscores but <b>must</b> start with an <code>a-z</code> letter character.
+        </node>
+        <node type="code" language="ByteSkript">
+on load:
+    trigger:
+        set {var} to "hello" // sets the variable
+        print {var} // gets the variable value
+        exit program
+        </node>
+    </section>
+</tutorial>
